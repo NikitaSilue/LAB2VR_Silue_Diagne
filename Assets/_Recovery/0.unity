@@ -1939,10 +1939,7 @@ Transform:
   m_LocalPosition: {x: 1.39822, y: -0, z: -2.32932}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1706113049}
-  - {fileID: 1498559011}
-  - {fileID: 1628758013}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &311109102
@@ -2562,17 +2559,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2999191159154571734, guid: 5bae8aeef40e4954bac3ade2b7d999e6, type: 3}
   m_PrefabInstance: {fileID: 450617262}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &450617264 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4284005438179915244, guid: 5bae8aeef40e4954bac3ade2b7d999e6, type: 3}
-  m_PrefabInstance: {fileID: 450617262}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83e4e6cca11330d4088d729ab4fc9d9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.XRInteractionManager
 --- !u!1 &456028217
 GameObject:
   m_ObjectHideFlags: 0
@@ -11240,6 +11226,89 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3766605776380858264, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
   m_PrefabInstance: {fileID: 1706113048}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1099844306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099844305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation.TeleportationArea
+  m_InteractionManager: {fileID: 0}
+  m_Colliders: []
+  m_InteractionLayers:
+    m_Bits: 2147483648
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 1
+  m_FocusMode: 1
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_AutoFindParentInteractableInHierarchy: 0
+  m_ParentInteractableObject: {fileID: 0}
+  m_TeleportationProvider: {fileID: 0}
+  m_MatchOrientation: 0
+  m_MatchDirectionalInput: 0
+  m_TeleportTrigger: 0
+  m_FilterSelectionByHitNormal: 0
+  m_UpNormalToleranceDegrees: 30
+  m_Teleporting:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1111199050
 GameObject:
   m_ObjectHideFlags: 0
@@ -13354,7 +13423,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 302744311}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3766605776380858264, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       propertyPath: m_Name
@@ -13362,15 +13431,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4417284572444563180, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.1112199
+      value: -0.106
       objectReference: {fileID: 0}
     - target: {fileID: 4417284572444563180, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.0000000022931204
       objectReference: {fileID: 0}
     - target: {fileID: 4417284572444563180, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.302319
+      value: 15.973
       objectReference: {fileID: 0}
     - target: {fileID: 4417284572444563180, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13378,15 +13447,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4417284572444563180, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4417284572444563180, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4417284572444563180, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4417284572444563180, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -13406,7 +13475,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3766605776380858264, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1498559013}
+      addedObject: {fileID: 1498559011}
     - targetCorrespondingSourceObject: {fileID: 2314368126648847604, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1498559012}
@@ -13421,41 +13490,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2314368126648847604, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
   m_PrefabInstance: {fileID: 1498559008}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1498559011 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4417284572444563180, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
-  m_PrefabInstance: {fileID: 1498559008}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1498559012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1498559010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_CustomShadowLayers: 0
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
-  m_SoftShadowQuality: 0
-  m_RenderingLayersMask:
-    serializedVersion: 0
-    m_Bits: 1
-  m_ShadowRenderingLayersMask:
-    serializedVersion: 0
-    m_Bits: 1
-  m_Version: 4
-  m_LightLayerMask: 1
-  m_ShadowLayerMask: 1
-  m_RenderingLayers: 1
-  m_ShadowRenderingLayers: 1
---- !u!114 &1498559013
+--- !u!114 &1498559011
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13464,10 +13499,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1498559009}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e2f4617667341945b5a7756e14b62d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation.TeleportationAnchor
-  m_InteractionManager: {fileID: 450617264}
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation.TeleportationArea
+  m_InteractionManager: {fileID: 0}
   m_Colliders: []
   m_InteractionLayers:
     m_Bits: 2147483648
@@ -13530,7 +13565,7 @@ MonoBehaviour:
   m_AutoFindParentInteractableInHierarchy: 0
   m_ParentInteractableObject: {fileID: 0}
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 2
+  m_MatchOrientation: 0
   m_MatchDirectionalInput: 0
   m_TeleportTrigger: 0
   m_FilterSelectionByHitNormal: 0
@@ -13538,7 +13573,35 @@ MonoBehaviour:
   m_Teleporting:
     m_PersistentCalls:
       m_Calls: []
-  m_TeleportAnchorTransform: {fileID: 1498559011}
+--- !u!114 &1498559012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498559010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
 --- !u!1 &1502791334
 GameObject:
   m_ObjectHideFlags: 0
@@ -14357,7 +14420,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 302744311}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3766605776380858264, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       propertyPath: m_Name
@@ -14365,15 +14428,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4417284572444563180, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.57822
+      value: -5.18
       objectReference: {fileID: 0}
     - target: {fileID: 4417284572444563180, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.0000000022931204
       objectReference: {fileID: 0}
     - target: {fileID: 4417284572444563180, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.67068005
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 4417284572444563180, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14381,7 +14444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4417284572444563180, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4417284572444563180, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       propertyPath: m_LocalRotation.y
@@ -14389,7 +14452,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4417284572444563180, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4417284572444563180, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -14409,7 +14472,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3766605776380858264, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1628758015}
+      addedObject: {fileID: 1628758013}
     - targetCorrespondingSourceObject: {fileID: 2314368126648847604, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1628758014}
@@ -14424,41 +14487,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2314368126648847604, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
   m_PrefabInstance: {fileID: 1628758010}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1628758013 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4417284572444563180, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
-  m_PrefabInstance: {fileID: 1628758010}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1628758014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628758012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_CustomShadowLayers: 0
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
-  m_SoftShadowQuality: 0
-  m_RenderingLayersMask:
-    serializedVersion: 0
-    m_Bits: 1
-  m_ShadowRenderingLayersMask:
-    serializedVersion: 0
-    m_Bits: 1
-  m_Version: 4
-  m_LightLayerMask: 1
-  m_ShadowLayerMask: 1
-  m_RenderingLayers: 1
-  m_ShadowRenderingLayers: 1
---- !u!114 &1628758015
+--- !u!114 &1628758013
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14467,10 +14496,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1628758011}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e2f4617667341945b5a7756e14b62d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation.TeleportationAnchor
-  m_InteractionManager: {fileID: 450617264}
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation.TeleportationArea
+  m_InteractionManager: {fileID: 0}
   m_Colliders: []
   m_InteractionLayers:
     m_Bits: 2147483648
@@ -14533,7 +14562,7 @@ MonoBehaviour:
   m_AutoFindParentInteractableInHierarchy: 0
   m_ParentInteractableObject: {fileID: 0}
   m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 2
+  m_MatchOrientation: 0
   m_MatchDirectionalInput: 0
   m_TeleportTrigger: 0
   m_FilterSelectionByHitNormal: 0
@@ -14541,7 +14570,35 @@ MonoBehaviour:
   m_Teleporting:
     m_PersistentCalls:
       m_Calls: []
-  m_TeleportAnchorTransform: {fileID: 1628758013}
+--- !u!114 &1628758014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628758012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
 --- !u!1001 &1636345850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15299,7 +15356,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 302744311}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3766605776380858264, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       propertyPath: m_Name
@@ -15307,15 +15364,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4417284572444563180, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.7287798
+      value: 5.127
       objectReference: {fileID: 0}
     - target: {fileID: 4417284572444563180, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.0000000022931204
       objectReference: {fileID: 0}
     - target: {fileID: 4417284572444563180, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.66747403
+      value: -2.996794
       objectReference: {fileID: 0}
     - target: {fileID: 4417284572444563180, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15323,7 +15380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4417284572444563180, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4417284572444563180, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       propertyPath: m_LocalRotation.y
@@ -15331,7 +15388,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4417284572444563180, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4417284572444563180, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -15351,100 +15408,11 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3766605776380858264, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1706113050}
+      addedObject: {fileID: 1099844306}
     - targetCorrespondingSourceObject: {fileID: 2314368126648847604, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 749737654}
   m_SourcePrefab: {fileID: 100100000, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
---- !u!4 &1706113049 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4417284572444563180, guid: ded447e740844e54ca034b484a27d5a6, type: 3}
-  m_PrefabInstance: {fileID: 1706113048}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1706113050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1099844305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e2f4617667341945b5a7756e14b62d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation.TeleportationAnchor
-  m_InteractionManager: {fileID: 450617264}
-  m_Colliders: []
-  m_InteractionLayers:
-    m_Bits: 2147483648
-  m_DistanceCalculationMode: 1
-  m_SelectMode: 1
-  m_FocusMode: 1
-  m_CustomReticle: {fileID: 0}
-  m_AllowGazeInteraction: 0
-  m_AllowGazeSelect: 0
-  m_OverrideGazeTimeToSelect: 0
-  m_GazeTimeToSelect: 0.5
-  m_OverrideTimeToAutoDeselectGaze: 0
-  m_TimeToAutoDeselectGaze: 3
-  m_AllowGazeAssistance: 0
-  m_FirstHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_LastHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FirstSelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_LastSelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FirstFocusEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_LastFocusExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FocusEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FocusExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Activated:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Deactivated:
-    m_PersistentCalls:
-      m_Calls: []
-  m_StartingHoverFilters: []
-  m_StartingSelectFilters: []
-  m_StartingInteractionStrengthFilters: []
-  m_AutoFindParentInteractableInHierarchy: 0
-  m_ParentInteractableObject: {fileID: 0}
-  m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 2
-  m_MatchDirectionalInput: 0
-  m_TeleportTrigger: 0
-  m_FilterSelectionByHitNormal: 0
-  m_UpNormalToleranceDegrees: 30
-  m_Teleporting:
-    m_PersistentCalls:
-      m_Calls: []
-  m_TeleportAnchorTransform: {fileID: 1706113049}
 --- !u!1 &1706210470
 GameObject:
   m_ObjectHideFlags: 0
@@ -19584,3 +19552,6 @@ SceneRoots:
   - {fileID: 2078059579}
   - {fileID: 1881718077}
   - {fileID: 302744311}
+  - {fileID: 1706113048}
+  - {fileID: 1498559008}
+  - {fileID: 1628758010}
