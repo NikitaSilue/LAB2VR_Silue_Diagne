@@ -15,6 +15,11 @@ public class IndicatorLights : MonoBehaviour
     [SerializeField] private XRSocketInteractor _socket;
     [SerializeField] private IndicatorLights _indicator;
     [SerializeField] private Light _light;
+    [Tooltip("Référence au socket et au sons")]
+    [SerializeField] private AudioSource _insertAudio;
+    [SerializeField] private AudioSource _refusedAudio;
+
+
 
 
     Renderer _renderer;
@@ -68,6 +73,7 @@ public class IndicatorLights : MonoBehaviour
         {
             _light.color = Color.green;
             _light.enabled = true;
+            _insertAudio.Play();
         }
     }
 
@@ -78,6 +84,7 @@ public class IndicatorLights : MonoBehaviour
         {
             _light.color = Color.yellow;
             _light.enabled = true;
+            _refusedAudio.Play();
         }
     }
 

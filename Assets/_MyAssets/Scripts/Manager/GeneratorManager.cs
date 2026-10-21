@@ -5,6 +5,8 @@ public class GeneratorManager : MonoBehaviour
     [SerializeField] private Transform _propFan;
     [SerializeField] private float _propFanSpeed = 180f;
     [SerializeField] private AudioSource _generatorAudio;
+    [SerializeField] private AudioSource _generatorAudioStart;
+    [SerializeField] private AudioSource _generatorAudioDown;
     [SerializeField] private PowerManager _powerManager;
 
     private bool _isStarted;
@@ -34,12 +36,16 @@ public class GeneratorManager : MonoBehaviour
     {
         _isStarted = true;
         _generatorAudio.Play();
+        _generatorAudioStart.Play();
+        _generatorAudioDown.Stop();
     }
 
     public void StopGenerator()
     {
         _isStarted = false;
         _generatorAudio.Stop();
+        _generatorAudioStart.Stop();
+        _generatorAudioDown.Play();
     }
 
     private void Update()

@@ -13,8 +13,12 @@ public class PowerManager : MonoBehaviour
     [Header("Lights")]
     [SerializeField] private GameObject _mainLights;
     [SerializeField] private GameObject _emergencyLights;
+    [SerializeField] private AudioSource _neonBuzzAudio;
     [Header("Generator")]
     [SerializeField] private Transform _fan;
+
+
+
 
     private bool _isOn;
     public bool IsOn => _isOn;
@@ -93,6 +97,7 @@ public class PowerManager : MonoBehaviour
         }
 
         _mainLights.SetActive(true);
+        _neonBuzzAudio.Stop();
     }
 
     private Coroutine _neonCoroutine;
@@ -114,17 +119,15 @@ public class PowerManager : MonoBehaviour
 
             // Démarrer le clignotement
             _neonCoroutine = StartCoroutine(StartNeonLights());
+            _neonBuzzAudio.Play();
         }
         else
         {
             // Retour à l'état initial
             _mainLights.SetActive(false);
             _emergencyLights.SetActive(true);
+            _neonBuzzAudio.Stop();
         }
     }
-
-  
-
-    
 
 }
