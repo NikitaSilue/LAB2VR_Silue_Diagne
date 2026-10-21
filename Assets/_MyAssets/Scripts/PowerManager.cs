@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
+using System.Collections;
 
 public class PowerManager : MonoBehaviour
 {
@@ -13,13 +14,14 @@ public class PowerManager : MonoBehaviour
     [SerializeField] private GameObject _mainLights;
     [SerializeField] private GameObject _emergencyLights;
     [Header("Generator")]
-    [SerializeField] private AudioSource _generatorAudio;
     [SerializeField] private Transform _fan;
 
     private bool _isOn;
     public bool IsOn => _isOn;
 
+    // Annonce l'état de changement du courant 
     public event Action<bool> OnPowerChanged;
+
 
     private void OnEnable()
     {
@@ -30,6 +32,7 @@ public class PowerManager : MonoBehaviour
         _socket1.selectExited.AddListener(OnCellRemoved);
         _socket2.selectExited.AddListener(OnCellRemoved);
         _socket3.selectExited.AddListener(OnCellRemoved);
+
 
     }
 
@@ -72,27 +75,56 @@ public class PowerManager : MonoBehaviour
         // Prévenir les autres systèmes
         OnPowerChanged?.Invoke(_isOn);
         UpdateLights(_isOn);
-        UpdateGenerator(_isOn);
     }
+
+    //UTILISATION DE L'IA POUR FAIRE LE CLIGNOTEMENT DE LA LUMIERE 
+    // Fait clignoter les néons avant l'allumage définitif
+    private IEnumerator StartNeonLights()
+    {
+        _mainLights.SetActive(false);
+
+        for (int i = 0; i < 3; i++)
+        {
+            _mainLights.SetActive(true);
+            yield return new WaitForSeconds(0.15f);
+
+            _mainLights.SetActive(false);
+            yield return new WaitForSeconds(0.25f);
+        }
+
+        _mainLights.SetActive(true);
+    }
+
+    private Coroutine _neonCoroutine;
 
     private void UpdateLights(bool powerOn)
     {
-        _mainLights.SetActive(powerOn);
-        _emergencyLights.SetActive(!powerOn);
-    }
-
-    private void UpdateGenerator(bool powerOn)
-    {
-        if (powerOn)
+        // Arrêter un éventuel clignotement en cours
+        if (_neonCoroutine != null)
         {
-            _generatorAudio.Play();
+            //UTILISATION DE L'IA POUR FAIRE LE CLIGNOTEMENT DE LA LUMIERE 
+            StopCoroutine(_neonCoroutine);
+            _neonCoroutine = null;
         }
 
+        if (powerOn)
+        {
+            // Éteindre l'éclairage d'urgence
+            _emergencyLights.SetActive(false);
+
+            // Démarrer le clignotement
+            _neonCoroutine = StartCoroutine(StartNeonLights());
+        }
         else
         {
-            _generatorAudio.Stop();
-        }         
+            // Retour à l'état initial
+            _mainLights.SetActive(false);
+            _emergencyLights.SetActive(true);
+        }
     }
 
+  
+
+    
 
 }

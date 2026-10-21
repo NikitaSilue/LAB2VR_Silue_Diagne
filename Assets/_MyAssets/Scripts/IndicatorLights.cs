@@ -52,7 +52,7 @@ public class IndicatorLights : MonoBehaviour
 
     public void TurnRed()
     {
-       _renderer.sharedMaterial = _redLight;
+        _renderer.sharedMaterial = _redLight;
 
         if (_light != null)
         {
@@ -85,11 +85,11 @@ public class IndicatorLights : MonoBehaviour
     {
         if (args.interactableObject.transform.CompareTag("CellCharged"))
         {
-            _indicator.TurnGreen();
+            TurnGreen();
         }
         else
         {
-            _indicator.TurnYellow();
+            TurnYellow();
         }
     }
 
@@ -97,4 +97,6 @@ public class IndicatorLights : MonoBehaviour
     {
         TurnRed();
     }
+
+
 }
