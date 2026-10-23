@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,9 +12,11 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
+    [SerializeField] private AudioSource _clickAudio;
+    [SerializeField] private float _clickDelay = 0.3f;
+
     void Awake()
     {
-        // Un seul GameManager : un doublon se détruit.
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -21,20 +25,39 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
-    // Appelée par l'UIManager quand on clique sur le bouton Quitter.
+    // Appelée par le bouton Quitter
     public void Quit()
     {
+        StartCoroutine(PlayClickThen(DoQuit));
+    }
+
+    // Appelée par le bouton Recommencer
+    public void ReStart()
+    {
+        StartCoroutine(PlayClickThen(DoRestart));
+    }
+
+    // Joue le clic, attend un peu, puis exécute l'action
+    private IEnumerator PlayClickThen(Action action)
+    {
+        if (_clickAudio != null)
+            _clickAudio.Play();
+
+        yield return new WaitForSeconds(_clickDelay);
+        action();
+    }
+
+    private void DoQuit()
+    {
 #if UNITY_EDITOR
-        // Dans l'éditeur, Application.Quit ne fait rien : on arrête plutôt le Play.
         UnityEditor.EditorApplication.isPlaying = false;
 #else
         Application.Quit();
 #endif
     }
 
-    public void ReStart()
+    private void DoRestart()
     {
-
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

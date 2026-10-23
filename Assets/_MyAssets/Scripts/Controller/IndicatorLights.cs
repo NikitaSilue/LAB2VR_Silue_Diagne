@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
@@ -14,7 +15,6 @@ public class IndicatorLights : MonoBehaviour
     [SerializeField] private Material _yellowLight;
     [Tooltip("Référence au socket et au voyant physique")]
     [SerializeField] private XRSocketInteractor _socket;
-    [SerializeField] private IndicatorLights _indicator;
     [SerializeField] private Light _light;
     [Tooltip("Référence au socket et au sons")]
     [SerializeField] private AudioSource _insertAudio;
@@ -66,7 +66,7 @@ public class IndicatorLights : MonoBehaviour
     }
     private void Start()
     {
-        // Vérifie l'état du socket au démarrage
+        // Vérifie l'état du socket au démarrage (sans jouer de son)
         if (_socket.hasSelection)
         {
             if (_socket.interactablesSelected[0].transform.CompareTag("CellCharged"))
@@ -98,7 +98,6 @@ public class IndicatorLights : MonoBehaviour
         {
             _light.color = Color.green;
             _light.enabled = true;
-            _insertAudio.Play();
         }
     }
 
@@ -109,33 +108,37 @@ public class IndicatorLights : MonoBehaviour
         {
             _light.color = Color.yellow;
             _light.enabled = true;
-            _refusedAudio.Play();
         }
     }
 
     public void OnCellEnter(SelectEnterEventArgs args)
     {
-        if (args.interactableObject.transform.CompareTag("CellCharged"))
+        Transform cell = args.interactableObject.transform;
+
+        // Couper le son de drop déclenché par le relâchement de la main
+        foreach (var src in cell.GetComponentsInChildren<AudioSource>())
+            src.Stop();
+
+        if (cell.CompareTag("CellCharged"))
         {
             TurnGreen();
+            if (_insertAudio != null) _insertAudio.Play();
         }
         else
         {
             TurnYellow();
-
-            // Vibration seulement si la cellule est déchargée
-            if (_lastCell == args.interactableObject.transform)
-            {
-                SendHaptic();
-            }
+            if (_refusedAudio != null) _refusedAudio.Play();
         }
+
+        // La main a déjà relâché la cellule : vibrer (chargée ou non)
+        if (_lastCell == cell)
+            SendHaptic();
     }
 
     public void OnCellRemoved(SelectExitEventArgs args)
     {
         TurnRed();
     }
-
 
 
     private void OnCellReleased(SelectExitEventArgs args)
@@ -145,20 +148,17 @@ public class IndicatorLights : MonoBehaviour
             return;
 
         _lastCell = args.interactableObject.transform;
-
         _lastHand = args.interactorObject.transform
             .GetComponentInParent<HapticImpulsePlayer>();
 
-        // Si la cellule est déjà insérée, vibrer immédiatement
+        // Le socket a déjà pris la cellule : vibrer tout de suite
         if (_socket.hasSelection &&
-            _socket.interactablesSelected[0].transform == _lastCell &&
-            !_lastCell.CompareTag("CellCharged"))
+            _socket.interactablesSelected[0].transform == _lastCell)
         {
             SendHaptic();
         }
-
-
     }
+
 
     private void SendHaptic()
     {

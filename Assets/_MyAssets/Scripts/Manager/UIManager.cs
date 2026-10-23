@@ -30,6 +30,7 @@ public class UIManager : MonoBehaviour
 
     [Header("Panels")]
     [SerializeField] private GameObject _screenMountPanel;
+    [SerializeField] private GameObject _codePanel;
     [SerializeField] private GameObject _endScreenPanel;
     [Header("Son de démarrage de l'écran")]
     [SerializeField] private AudioSource _screenBootAudio;
@@ -112,7 +113,10 @@ public class UIManager : MonoBehaviour
             _messageText.text = "CONSOLE INACTIVE";
             _messageText.color = Color.red;
         }
-       
+
+        if (_codePanel != null)
+            _codePanel.SetActive(isOn);
+
     }
 
     // Affichage du code généré
@@ -148,7 +152,7 @@ public class UIManager : MonoBehaviour
         _messageText.text = "FIN DE LA PARTIE ";
         _messageText.color = Color.green;
         _audioSignalDetresse.Play();
-        _screenMountPanel.SetActive(false);
+        _screenMountPanel.SetActive(true);
         _endScreenPanel.SetActive(true);
 
     }
