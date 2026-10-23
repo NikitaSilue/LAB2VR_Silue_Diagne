@@ -31,7 +31,7 @@ public class AlienController : MonoBehaviour
     {
         if (_player == null)
             return;
-
+        //UTILISATION DE L'IA POUR LE DEBUG
         // Direction horizontale vers le joueur
         Vector3 direction = _player.position - transform.position;
         direction.y = 0f;

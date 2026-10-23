@@ -151,6 +151,7 @@ public class UIManager : MonoBehaviour
     {
         _messageText.text = "FIN DE LA PARTIE ";
         _messageText.color = Color.green;
+        _audioCodeAccepted.Play();
         _audioSignalDetresse.Play();
         _screenMountPanel.SetActive(true);
         _endScreenPanel.SetActive(true);
