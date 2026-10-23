@@ -126,7 +126,7 @@ public class IndicatorLights : MonoBehaviour
         }
         else
         {
-            TurnYellow();
+            TurnRed();
             if (_refusedAudio != null) _refusedAudio.Play();
         }
 
@@ -137,7 +137,7 @@ public class IndicatorLights : MonoBehaviour
 
     public void OnCellRemoved(SelectExitEventArgs args)
     {
-        TurnRed();
+        TurnYellow();
     }
 
 
