@@ -3044,7 +3044,7 @@ GameObject:
   - component: {fileID: 279246925}
   - component: {fileID: 279246926}
   m_Layer: 0
-  m_Name: EtatCourant
+  m_Name: PowerState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3058,7 +3058,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279246923}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 2.1999817}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.83, y: 0.83, z: 0.83}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -10261,7 +10261,7 @@ GameObject:
   - component: {fileID: 481497211}
   - component: {fileID: 481497210}
   m_Layer: 0
-  m_Name: CodeSaisi
+  m_Name: Code
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10275,7 +10275,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 481497208}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0.4}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.118311495, y: 0.118311495, z: 0.118311495}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -11465,7 +11465,7 @@ GameObject:
   - component: {fileID: 551253599}
   - component: {fileID: 551253598}
   m_Layer: 0
-  m_Name: StationMode
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11479,7 +11479,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551253596}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 5.6}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.83, y: 0.83, z: 0.83}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -13350,7 +13350,7 @@ Transform:
   m_GameObject: {fileID: 734030837}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.617, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14145,7 +14145,7 @@ GameObject:
   - component: {fileID: 837911576}
   - component: {fileID: 837911575}
   m_Layer: 0
-  m_Name: Code
+  m_Name: CodePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14265,7 +14265,7 @@ GameObject:
   - component: {fileID: 843709164}
   - component: {fileID: 843709163}
   m_Layer: 0
-  m_Name: EtatMessage
+  m_Name: StatusState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14279,7 +14279,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843709161}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -0.3}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.096250005, y: 0.09625, z: 0.09625001}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -14337,8 +14337,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 93.4
-  m_fontSizeBase: 93.4
+  m_fontSize: 76.36
+  m_fontSizeBase: 76.36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -14745,7 +14745,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 888414664}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 3.6}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.83, y: 0.83, z: 0.83}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -15362,6 +15362,7 @@ MonoBehaviour:
   _audioCodeAccepted: {fileID: 379509675}
   _audioSignalDetresse: {fileID: 379509674}
   _screenMountPanel: {fileID: 1492076530}
+  _codePanel: {fileID: 837911573}
   _endScreenPanel: {fileID: 1893976632}
   _screenBootAudio: {fileID: 1492076532}
 --- !u!1001 &936939155
@@ -15466,7 +15467,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949148757}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 4.6}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.118311495, y: 0.118311495, z: 0.118311495}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -17897,7 +17898,7 @@ GameObject:
   - component: {fileID: 1187967563}
   - component: {fileID: 1187967562}
   m_Layer: 0
-  m_Name: EtatBorne
+  m_Name: SlotState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17911,7 +17912,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187967560}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.83, y: 0.83, z: 0.83}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -18125,7 +18126,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1190091700}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.53, y: 0.6624995, z: 0.6624995}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -20677,7 +20678,7 @@ GameObject:
   - component: {fileID: 1453323332}
   - component: {fileID: 1453323333}
   m_Layer: 0
-  m_Name: EtatCode
+  m_Name: CodeState
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20691,7 +20692,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1453323330}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.118311495, y: 0.118311495, z: 0.118311495}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -25480,7 +25481,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1833717334}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 5.0000005}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.53, y: 0.6624995, z: 0.6624995}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -27014,7 +27015,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1893976633
 Transform:
   m_ObjectHideFlags: 0

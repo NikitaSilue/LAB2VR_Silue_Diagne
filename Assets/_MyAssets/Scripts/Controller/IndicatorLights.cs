@@ -72,11 +72,11 @@ public class IndicatorLights : MonoBehaviour
             if (_socket.interactablesSelected[0].transform.CompareTag("CellCharged"))
                 TurnGreen();
             else
-                TurnYellow();
+                TurnRed();
         }
         else
         {
-            TurnRed();
+            TurnYellow();
         }
     }
 
